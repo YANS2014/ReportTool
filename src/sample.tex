@@ -1,0 +1,72 @@
+%%% config
+% data1:expt01.json
+% data2:expt02.json
+%%%
+
+\documentclass[twocolumn,uplatex]{jsarticle} 
+\usepackage[dvipdfmx]{graphicx}                                     
+\usepackage{tabularx,setspace,booktabs,multirow} 
+
+% subfigure の packages 設定
+\usepackage{subcaption}
+\captionsetup[subfigure]{labelformat=simple}
+\renewcommand*{\thesubfigure}{(\alph{subfigure})}
+% \usepackage{NLP}
+% \usepackage{ulem}
+
+今回の実験の最高値は{# data['basic']['n_articles'] #}\%であった. 
+% 今回の実験の最高値は38\%であった.
+
+% =========================================
+\newcommand{\study}{○○らの研究}
+\newcommand{\SimpleEW}{SimpleEW}
+\newcommand{\ComplexJW}{ComplexJW}
+
+\newcommand{\match}{対応有}
+\newcommand{\pmatch}{一部対応有}
+\newcommand{\nomatch}{対応無}
+
+
+% 実験設定
+\newcommand{\MeCab}{MeCab0.98\cite{工藤拓:2001-03-05}}
+\newcommand{\CaboCha}{CaboCha0.66\cite{1995}}
+\newcommand{\EDR}{EDR日英対訳辞書およびEDR英日対訳辞書\cite{1995}}
+
+% =========================================
+\def\figref#1{図\ref{#1}}
+\def\tblref#1{表\ref{#1}}
+\def\eqref#1{式(\ref{#1})}
+\def\ssref#1{\ref{#1}章}
+
+% =========================================
+% vim-latex suite command
+
+% SPA for part
+% SCH for chapter
+% SSE for section
+% SSS for subsection
+% SS2 for subsubsection
+% SPG for paragraph
+% SSP for subparagraph
+
+\begin{document}
+
+\title{Simple English Wikipedia記事との内容対応付けによる\\日本語Wikipedia記事の短縮} 
+\author{
+    竹野 峻輔 \, \, 山本 和英
+    \\ 長岡技術科学大学 電気系
+}
+\date{\{takeno,yamamoto\}@jnlp.org} 
+\maketitle
+\begin{abstract}
+    データを分離したい.
+    例えば私の名前は{# data['name'] #}を表示したい
+\end{abstract}
+
+
+\section{はじめに}
+文書とデータを分離したい…
+json(pythonで扱い易い)を分離.
+
+\end{document}
+
