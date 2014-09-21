@@ -3,16 +3,9 @@
 import sys
 import re
 
-# 絵文字らしき文字列 （　:), :D, :p, :(, ;), XD, XPなど）を抽出する
-p = re.compile(u'(:|;|X)(\)|\(|D|p)')
-
-for a in sys.stdin.readlines():
-	q = unicode(a, 'utf-8')
-	searched = p.search(q)
-	if searched:
-		print searched.group()
-		
-	
-		
-		
-		
+def main():
+    for a in sys.stdin.readlines():
+        print a,
+        
+if __name__ == '__main__':
+    main()
